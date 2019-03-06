@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build": "emcc -o index.html index.c -s WASM=1 --shell-file template/not_minimal.html -s NO_EXIT_RUNTIME=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='[\"ccall\", \"cwrap\"]'",
+    "start": "yarn build && serve ./"
+  }
+}
